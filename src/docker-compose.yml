@@ -1,0 +1,17 @@
+version: '3.4'
+
+# networks:
+#   5gmeta-net:
+#     driver: bridge
+
+services:
+
+  activemq: 
+    image: 5gmeta/message-broker:latest # activemq:5.15.11 #
+    ports: 
+      - 5673:5673
+      - 8161:8161
+      - 61616:61616
+
+    # networks:
+    #   - 5gmeta-net
